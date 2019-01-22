@@ -12,6 +12,7 @@ app.get('/', function(req, res) {
 app.get('/', (req, res) => {
   var cursor = db.collection('inhaal').find()
 })
+
 app.post('/examen', (req, res) => {
   db.collection('inhaal').save(req.body, (err, result) => {
    if (err) return console.log(err)
